@@ -1,8 +1,8 @@
 package airlines.management.system.service;
 
-import java.util.List;
 import airlines.management.system.model.Flight;
 import airlines.management.system.model.enums.FlightStatus;
+import java.util.List;
 
 public interface FlightService {
     Flight save(Flight flight);

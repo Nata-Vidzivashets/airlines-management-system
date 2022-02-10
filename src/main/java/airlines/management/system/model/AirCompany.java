@@ -1,5 +1,6 @@
 package airlines.management.system.model;
 
+import airlines.management.system.model.enums.AirCompanyType;
 import java.time.LocalDate;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -8,7 +9,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import airlines.management.system.model.enums.AirCompanyType;
 import lombok.Data;
 
 @Data

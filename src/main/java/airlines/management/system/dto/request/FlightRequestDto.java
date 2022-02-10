@@ -1,7 +1,6 @@
 package airlines.management.system.dto.request;
 
 import java.util.List;
-import airlines.management.system.model.enums.FlightStatus;
 import lombok.Getter;
 import lombok.Setter;
 

@@ -1,12 +1,12 @@
 package airlines.management.system.controller;
 
-import java.util.List;
-import java.util.stream.Collectors;
 import airlines.management.system.dto.request.AirCompanyRequestDto;
 import airlines.management.system.dto.response.AirCompanyResponseDto;
 import airlines.management.system.model.AirCompany;
 import airlines.management.system.service.AirCompanyService;
 import airlines.management.system.service.mapper.impl.AirCompanyMapper;
+import java.util.List;
+import java.util.stream.Collectors;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -45,7 +45,8 @@ public class AirCompanyController {
     @PutMapping("/{id}")
     public AirCompanyResponseDto update(@PathVariable Long id,
                                         @RequestBody AirCompanyRequestDto requestDto) {
-        AirCompany airCompany = airCompanyService.update(id, airCompanyMapper.mapToModel(requestDto));
+        AirCompany airCompany = airCompanyService.update(id,
+                airCompanyMapper.mapToModel(requestDto));
         return airCompanyMapper.mapToDto(airCompany);
     }
 

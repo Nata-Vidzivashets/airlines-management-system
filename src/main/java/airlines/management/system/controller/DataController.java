@@ -1,8 +1,5 @@
 package airlines.management.system.controller;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.List;
 import airlines.management.system.model.AirCompany;
 import airlines.management.system.model.Airplane;
 import airlines.management.system.model.Flight;
@@ -12,6 +9,9 @@ import airlines.management.system.model.enums.FlightStatus;
 import airlines.management.system.service.AirCompanyService;
 import airlines.management.system.service.AirplaneService;
 import airlines.management.system.service.FlightService;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.List;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;

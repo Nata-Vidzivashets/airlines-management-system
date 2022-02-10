@@ -1,14 +1,14 @@
 package airlines.management.system.controller;
 
-import java.util.List;
-import java.util.Locale;
-import java.util.stream.Collectors;
 import airlines.management.system.dto.request.FlightRequestDto;
 import airlines.management.system.dto.response.FlightResponseDto;
 import airlines.management.system.model.Flight;
 import airlines.management.system.model.enums.FlightStatus;
 import airlines.management.system.service.FlightService;
 import airlines.management.system.service.mapper.impl.FlightMapper;
+import java.util.List;
+import java.util.Locale;
+import java.util.stream.Collectors;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -65,7 +65,8 @@ public class FlightController {
     @PatchMapping("/{id}")
     public FlightResponseDto updateStatus(@PathVariable Long id,
                                           @RequestBody String status) {
-        Flight flight = flightService.updateStatus(id, FlightStatus.valueOf(status.toUpperCase(Locale.ROOT)));
+        Flight flight = flightService.updateStatus(id,
+                FlightStatus.valueOf(status.toUpperCase(Locale.ROOT)));
         return flightMapper.mapToDto(flight);
     }
 

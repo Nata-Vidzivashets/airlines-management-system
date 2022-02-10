@@ -1,11 +1,11 @@
 package airlines.management.system.service.impl;
 
-import java.time.LocalDateTime;
-import java.util.List;
 import airlines.management.system.model.Flight;
 import airlines.management.system.model.enums.FlightStatus;
 import airlines.management.system.repository.FlightRepository;
 import airlines.management.system.service.FlightService;
+import java.time.LocalDateTime;
+import java.util.List;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

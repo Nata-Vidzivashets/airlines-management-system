@@ -1,5 +1,6 @@
 package airlines.management.system.model;
 
+import airlines.management.system.model.enums.FlightStatus;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
@@ -14,7 +15,6 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import airlines.management.system.model.enums.FlightStatus;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -33,12 +33,12 @@ public class Flight {
     private AirCompany airCompany;
     @ManyToMany
     @JoinTable(joinColumns = @JoinColumn(name = "flight_id"),
-    inverseJoinColumns = @JoinColumn(name = "airplane_id"))
+            inverseJoinColumns = @JoinColumn(name = "airplane_id"))
     private List<Airplane> airplanes;
     private String departureCountry;
     private String destinationCountry;
     private Integer distance;
-    private Integer estimatedFlightTime;  //in minutes
+    private Integer estimatedFlightTime; // in minutes
     private LocalDateTime startedAt;
     private LocalDateTime endedAt;
     private LocalDateTime delayStartedAt;

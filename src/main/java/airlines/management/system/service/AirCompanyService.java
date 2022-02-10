@@ -1,7 +1,7 @@
 package airlines.management.system.service;
 
-import java.util.List;
 import airlines.management.system.model.AirCompany;
+import java.util.List;
 
 public interface AirCompanyService {
     AirCompany save(AirCompany airCompany);

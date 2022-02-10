@@ -1,9 +1,5 @@
 package airlines.management.system.service.mapper.impl;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.stream.Collectors;
 import airlines.management.system.dto.request.FlightRequestDto;
 import airlines.management.system.dto.response.FlightResponseDto;
 import airlines.management.system.model.Airplane;
@@ -14,6 +10,10 @@ import airlines.management.system.service.AirplaneService;
 import airlines.management.system.service.mapper.RequestDtoMapper;
 import airlines.management.system.service.mapper.ResponseDtoMapper;
 import airlines.management.system.util.DateTimePatternUtil;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.stream.Collectors;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 

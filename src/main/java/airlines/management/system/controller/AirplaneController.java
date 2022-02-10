@@ -1,12 +1,12 @@
 package airlines.management.system.controller;
 
-import java.util.List;
-import java.util.stream.Collectors;
 import airlines.management.system.dto.request.AirplaneRequestDto;
 import airlines.management.system.dto.response.AirplaneResponseDto;
 import airlines.management.system.model.Airplane;
 import airlines.management.system.service.AirplaneService;
 import airlines.management.system.service.mapper.impl.AirplaneMapper;
+import java.util.List;
+import java.util.stream.Collectors;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
