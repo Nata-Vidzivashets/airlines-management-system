@@ -1,6 +1,5 @@
 package airlines.management.system.dto.request;
 
-import airlines.management.system.model.enums.AirCompanyType;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;

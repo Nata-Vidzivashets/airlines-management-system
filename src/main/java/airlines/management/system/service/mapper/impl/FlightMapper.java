@@ -42,9 +42,12 @@ public class FlightMapper implements RequestDtoMapper<FlightRequestDto, Flight>,
         flight.setDestinationCountry(dto.getDestinationCountry());
         flight.setDistance(dto.getDistance());
         flight.setEstimatedFlightTime(dto.getEstimatedFlightTime());
-        flight.setStartedAt(LocalDateTime.parse(dto.getStartedAt(), dateTimeFormatter));
-        flight.setEndedAt(LocalDateTime.parse(dto.getEndedAt(), dateTimeFormatter));
-        flight.setDelayStartedAt(LocalDateTime.parse(dto.getDelayStartedAt(), dateTimeFormatter));
+        flight.setStartedAt(dto.getStartedAt() != null
+                ? LocalDateTime.parse(dto.getStartedAt(), dateTimeFormatter) : null);
+        flight.setEndedAt(dto.getEndedAt() != null
+                ? LocalDateTime.parse(dto.getEndedAt(), dateTimeFormatter) : null);
+        flight.setDelayStartedAt(dto.getDelayStartedAt() != null
+                ? LocalDateTime.parse(dto.getDelayStartedAt(), dateTimeFormatter) : null);
         flight.setCreatedAt(LocalDate.parse(dto.getCreatedAt(), dateFormatter));
         return flight;
     }
@@ -62,9 +65,12 @@ public class FlightMapper implements RequestDtoMapper<FlightRequestDto, Flight>,
         responseDto.setDestinationCountry(flight.getDestinationCountry());
         responseDto.setDistance(flight.getDistance());
         responseDto.setEstimatedFlightTime(flight.getEstimatedFlightTime());
-        responseDto.setStartedAt(flight.getStartedAt().format(dateTimeFormatter));
-        responseDto.setEndedAt(flight.getEndedAt().format(dateTimeFormatter));
-        responseDto.setDelayStartedAt(flight.getDelayStartedAt().format(dateTimeFormatter));
+        responseDto.setStartedAt(flight.getStartedAt() != null
+                ? flight.getStartedAt().format(dateTimeFormatter) : null);
+        responseDto.setEndedAt(flight.getEndedAt() != null
+                ? flight.getEndedAt().format(dateTimeFormatter) : null);
+        responseDto.setDelayStartedAt(flight.getDelayStartedAt() != null
+                ? flight.getDelayStartedAt().format(dateTimeFormatter) : null);
         responseDto.setCreatedAt(flight.getCreatedAt().format(dateFormatter));
         return responseDto;
     }

@@ -21,9 +21,6 @@ import lombok.ToString;
 @Entity
 @Table(name = "airplanes")
 public class Airplane {
-    /*1) Airplane
-    ID, name, factory serial number, air company id, number of flights, flight distance,
-    fuel capacity, type, created at*/
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

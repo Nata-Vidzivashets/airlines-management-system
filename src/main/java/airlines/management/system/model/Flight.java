@@ -17,16 +17,12 @@ import javax.persistence.Table;
 import airlines.management.system.model.enums.FlightStatus;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.ToString;
 
-@ToString
 @Setter
 @Getter
 @Entity
 @Table(name = "flights")
 public class Flight {
-    /*ID, flight status, Air company id, airplane id, departure country, destination country,
-distance, estimated flight time, started at, ended at, delay started at, created at*/
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -42,7 +38,7 @@ distance, estimated flight time, started at, ended at, delay started at, created
     private String departureCountry;
     private String destinationCountry;
     private Integer distance;
-    private Integer estimatedFlightTime;
+    private Integer estimatedFlightTime;  //in minutes
     private LocalDateTime startedAt;
     private LocalDateTime endedAt;
     private LocalDateTime delayStartedAt;

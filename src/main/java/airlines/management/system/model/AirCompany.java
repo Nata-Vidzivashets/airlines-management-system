@@ -9,17 +9,12 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import airlines.management.system.model.enums.AirCompanyType;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.Data;
 
-@Getter
-@Setter
-@ToString
+@Data
 @Entity
 @Table(name = "air_companies")
 public class AirCompany {
-    /*ID, name, company type, founded at*/
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

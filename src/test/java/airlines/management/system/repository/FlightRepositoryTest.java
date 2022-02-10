@@ -1,7 +1,5 @@
 package airlines.management.system.repository;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import java.util.List;
 import airlines.management.system.model.Flight;
 import org.junit.jupiter.api.Assertions;
@@ -44,5 +42,4 @@ class FlightRepositoryTest {
         Assertions.assertEquals(1, actual.get(0).getId());
         Assertions.assertEquals(3, actual.get(1).getId());
     }
-
 }
